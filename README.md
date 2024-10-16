@@ -4,7 +4,7 @@ Welcome to **MovieVerse** – a personal project that allows users to explore th
 
 ## Live Demo
 
-You can check out the live version of the website here: [MovieVerse](https://um-weather.vercel.app)
+You can check out the live version of the website here: [MovieVerse](https://movie-verse-red.vercel.app/index.html)
 
 ## Features
 
