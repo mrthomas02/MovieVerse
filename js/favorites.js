@@ -24,14 +24,12 @@ function displayFavorites() {
             <button class="remove-favorite">Remove from Favorites</button>
         `;
 
-        // Add event listener for navigating to movie details page
         movieCard.addEventListener('click', () => {
             window.location.href = `../pages/movie.html?movieId=${movie.id}`;
         });
 
-        // Prevent the "remove" button from triggering the movie details navigation
         movieCard.querySelector('.remove-favorite').addEventListener('click', (event) => {
-            event.stopPropagation(); // Stop event from bubbling up to movie card click event
+            event.stopPropagation();
             if (confirm(`Are you sure you want to remove "${movie.title}" from favorites?`)) {
                 removeFromFavorites(movie.id);
                 displayFavorites();

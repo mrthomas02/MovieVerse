@@ -10,7 +10,6 @@ function loadMovieDetails(id) {
     const movieDetailsUrl = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`;
     const movieVideosUrl = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${apiKey}`;
 
-    // Fetch movie details
     fetch(movieDetailsUrl)
         .then(response => response.json())
         .then(movie => {
@@ -18,13 +17,12 @@ function loadMovieDetails(id) {
         })
         .catch(error => console.error('Error fetching movie details:', error));
 
-    // Fetch movie trailers (videos)
     fetch(movieVideosUrl)
         .then(response => response.json())
         .then(data => {
             const trailers = data.results.filter(video => video.type === 'Trailer' && video.site === 'YouTube');
             if (trailers.length > 0) {
-                displayMovieTrailer(trailers[0]); // Display the first available trailer
+                displayMovieTrailer(trailers[0]);
             }
         })
         .catch(error => console.error('Error fetching movie trailers:', error));
@@ -67,6 +65,5 @@ function displayMovieTrailer(trailer) {
             encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     `;
 
-    // Append the trailer section to the movie details section
     movieDetailsSection.appendChild(trailerSection);
 }
