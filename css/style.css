@@ -199,10 +199,10 @@ footer {
 }
 
 .movie-detail iframe {
-    width: 100%; /* Let the height adjust automatically */
-    max-width: 560px; /* Limit maximum width */
-    height: 315px; /* Limit maximum height */
-    border: none; /* Remove border */
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border: none;
 }
 
 @media(max-width:480px){
@@ -215,7 +215,7 @@ footer {
     }
 
     nav ul li a {
-        font-size: 1.2em; /* Increase the font size for better readability on mobile devices */
+        font-size: 1.2em;
     }
 
     .movies-grid {
@@ -262,7 +262,7 @@ footer {
     }
 
     .movie-detail iframe {
-        max-width: 300px; /* Adjust max-width for mobile */
-        max-height: 200px; /* Adjust max-height for mobile */
+        max-width: 300px;
+        max-height: 200px;
     }
 }
